@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flashcard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Flashcard</h1>
+
+      <form id="add-form" class="add-form">
+        <label>
+          Front
+          <textarea id="front-input" name="front" rows="2"></textarea>
+        </label>
+        <label>
+          Back
+          <textarea id="back-input" name="back" rows="2"></textarea>
+        </label>
+        <div id="form-error" class="form-error" hidden>
+          <p>Front and back cannot be empty.</p>
+          <button type="button" id="form-error-clear">Clear</button>
+        </div>
+        <button type="submit" id="add-button">Add</button>
+      </form>
+
+      <p id="empty-state" class="empty-state" hidden>No cards yet. Add one above.</p>
+      <ul id="card-list" class="card-list"></ul>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
