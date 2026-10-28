@@ -27,19 +27,31 @@
           <button type="submit" id="add-button">Add</button>
       </form>
       <div class="button-group">
-        <button type="button" id="list-button">Word List View</button>
-        <button type="button" class="single-view-button" id="single-view-button-add">Singel word</button>
+        <button type="button" id="list-button">Word List</button>
+        <button type="button" class="single-view-button" id="single-view-button-add">Single Word</button>
       </div>
     </div>
 
     <div id="list-view" hidden>
       <div class="button-group">
-        <button type="button" id="back-to-add-button">Back to Add</button>
         <button type="button" id="shuffle-button">Shuffle</button>
-        <button type="button" class="single-view-button" id="single-view-button-list">Singel word</button>
+        <label class="toggle-switch" id="random-toggle-button">
+          <input type="checkbox" id="random-toggle-checkbox" />
+          <span class="toggle-slider"></span>
+          <span class="toggle-label">Random</span>
+        </label>
+        <button type="button" id="side-select-button" hidden>Front First</button>
       </div>
+        <div class="button-group">
+          <button type="button" id="up-batch-button">Up</button>
+          <button type="button" id="down-batch-button">Down</button>
+        </div>
         <p id="empty-state" class="empty-state" hidden>No cards yet. Add one above.</p>
         <ul id="card-list" class="card-list"></ul>
+        <div class="button-group">
+          <button type="button" id="back-to-add-button">Add Word</button>
+          <button type="button" class="single-view-button" id="single-view-button-list">Single Word</button>
+        </div>
       </div>
 
       <div id="single-word-view" hidden>
@@ -47,7 +59,15 @@
         <div class="button-group">
           <button type="button" id="next-card-button" class="next-word-button">Next Word</button>
           <button type="button" id="shuffle-single-button">Shuffle</button>
-          <button type="button" id="back-to-add-single-button">Back to Add</button>
+          <label class="toggle-switch" id="random-toggle-single-button">
+            <input type="checkbox" id="random-toggle-single-checkbox" />
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">Random</span>
+          </label>
+          <button type="button" id="side-select-single-button" hidden>Front First</button>
+        </div>
+        <div class="button-group">
+          <button type="button" id="back-to-add-single-button">Add Word</button>
           <button type="button" id="return-from-single-button">Word List</button>
         </div>
       </div>
